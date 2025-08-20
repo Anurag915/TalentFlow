@@ -1,8 +1,8 @@
 import { useUser } from "@clerk/nextjs";
 import { useQuery } from "convex/react";
-import { getUserByClerkId } from "../convex/users";
+// import { getUserByClerkId } from "convex/users";
 
-import { api } from "../convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 
 export const useUserRole = () => {
   const { user } = useUser();

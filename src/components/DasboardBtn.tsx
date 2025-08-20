@@ -3,11 +3,11 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SparkleIcon } from "lucide-react";
+import { useUserRole } from "@/hooks/useUserRole";
 
 function DasboardBtn() {
-  const isCandidate = false; // Replace with actual logic to determine if the user is a candidate
-  const isInterviewer = true; // Replace with actual logic to determine if the user is an interviewer
-  if (isCandidate) {
+  const {isCandidate,isInterviewer,isLoading} = useUserRole();
+  if (isCandidate || isLoading) {
     return null;
   }
   return (
