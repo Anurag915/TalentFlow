@@ -31,7 +31,8 @@ const useMeetingActions = () => {
   };
 
   const joinMeeting = (callId: string) => {
-    if (!client) return toast.error("Failed to join meeting. Please try again.");
+    if (!client)
+      return toast.error("Failed to join meeting. Please try again.");
     router.push(`/meeting/${callId}`);
   };
 
